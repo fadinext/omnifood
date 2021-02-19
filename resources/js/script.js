@@ -61,4 +61,20 @@ $(document).ready( function() {
     $('.js--wp-2').waypoint( direction => $('.js--wp-2').addClass('animate__animated animate__fadeInUp'), {offset:'50%'} )
     $('.js--wp-3').waypoint( direction => $('.js--wp-3').addClass('animate__animated animate__fadeIn'), {offset:'50%'} )
     $('.js--wp-4').waypoint( direction => $('.js--wp-4').addClass('animate__animated animate__pulse'), {offset:'50%'} )
+
+
+    /*mobile nav*/
+    $('.js--nav-icon').click( _ => {
+        let nav = $('.js--main-nav');
+        let icon = $('.js--nav-icon ion-icon') 
+
+        nav.slideToggle(200)
+        if (icon.attr("name") == "menu-outline") {
+            icon.attr("name", "close-outline");
+         } 
+         else {
+            icon.attr("name", "menu-outline")
+         }
+    })
+    
 })
